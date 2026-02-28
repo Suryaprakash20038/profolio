@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+@theme {
+  --color-mint: #F3F4F6;
+  /* Gray 100 - Soft backgrounds */
+  --color-mint-dark: #E5E7EB;
+  /* Gray 200 - Hover states / borders */
+  --color-emerald: #2563EB;
+  /* Blue 600 - Primary Button / Accent */
+  --color-emerald-light: #60A5FA;
+  /* Blue 400 - Soft Accent */
+  --color-royal: #4B5563;
+  /* Gray 600 - Secondary text */
+  --color-evergreen: #111827;
+  /* Gray 900 - Primary text / Headings */
+  --color-surface: #ffffff;
+  --color-body-bg: #FAFAFA;
+  /* Neutral 50 - Body background */
+
+  --shadow-premium: 0 10px 40px -10px rgba(0, 0, 0, 0.08);
+  /* Minimal shadow */
+  --shadow-card: 0 4px 20px -5px rgba(0, 0, 0, 0.05);
+  --shadow-button: 0 8px 20px -6px rgba(37, 99, 235, 0.4);
+  /* Blue colored shadow */
+}
+
+:root {
+  font-family: 'Inter', 'Plus Jakarta Sans', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+
+  color-scheme: light;
+  color: var(--color-evergreen);
+  background-color: var(--color-body-bg);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: var(--color-body-bg);
+  color: var(--color-evergreen);
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-mint-dark);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-royal);
+}
+
+::selection {
+  background: var(--color-mint-dark);
+  color: var(--color-evergreen);
+}
