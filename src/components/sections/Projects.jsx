@@ -18,10 +18,10 @@ const Projects = () => {
                     {projects.map((project, index) => (
                         <motion.div
                             key={index}
-                            initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.8, delay: index * 0.1 }}
-                            viewport={{ once: true }}
+                            initial={{ opacity: 0, y: 50, scale: 0.95 }}
+                            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                            transition={{ duration: 0.8, delay: index * 0.15, ease: [0.25, 1, 0.5, 1] }}
+                            viewport={{ once: true, margin: "-50px" }}
                             className="h-full"
                         >
                             <SpotlightCard className="group bg-white/70 backdrop-blur-xl rounded-[2rem] overflow-hidden border border-white shadow-premium hover:shadow-2xl hover:border-emerald/10 transition-all duration-500 flex flex-col h-full cursor-pointer hover:-translate-y-2 relative">

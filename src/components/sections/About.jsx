@@ -5,7 +5,7 @@ import { Code, Users, Lightbulb } from 'lucide-react';
 
 const About = () => {
     return (
-        <section id="about" className="py-32 bg-[#FAFAFA] text-evergreen relative overflow-hidden">
+        <section id="about" className="py-32 bg-body-bg text-evergreen relative overflow-hidden">
 
             {/* Smooth Glowing Orbs - Light theme optimized */}
             <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-emerald-light/20 rounded-full blur-[120px] mix-blend-multiply opacity-50 pointer-events-none -translate-y-1/2 translate-x-1/2"></div>
@@ -16,12 +16,11 @@ const About = () => {
 
                 <div className="grid md:grid-cols-2 gap-20 items-center mt-20">
 
-                    {/* Left Content */}
                     <motion.div
-                        initial={{ opacity: 0, x: -40 }}
+                        initial={{ opacity: 0, x: -60 }}
                         whileInView={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.8 }}
-                        viewport={{ once: true }}
+                        transition={{ duration: 1, ease: [0.25, 1, 0.5, 1] }}
+                        viewport={{ once: true, margin: "-50px" }}
                         className="space-y-8 text-royal leading-relaxed text-xl font-medium"
                     >
                         <p className="first-letter:text-7xl first-letter:font-black first-letter:text-emerald first-letter:mr-3 first-letter:float-left">
@@ -39,10 +38,10 @@ const About = () => {
 
                     {/* Right Interactive Cards */}
                     <motion.div
-                        initial={{ opacity: 0, x: 40 }}
+                        initial={{ opacity: 0, x: 60 }}
                         whileInView={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.8, delay: 0.2 }}
-                        viewport={{ once: true }}
+                        transition={{ duration: 1, delay: 0.2, ease: [0.25, 1, 0.5, 1] }}
+                        viewport={{ once: true, margin: "-50px" }}
                         className="grid gap-6"
                     >
                         {[
@@ -52,11 +51,11 @@ const About = () => {
                         ].map((item, index) => (
                             <motion.div
                                 key={index}
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ duration: 0.5, delay: 0.3 + item.delay }}
-                                whileHover={{ x: 10, scale: 1.02 }}
+                                initial={{ opacity: 0, y: 30, scale: 0.95 }}
+                                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                                viewport={{ once: true, margin: "-50px" }}
+                                transition={{ duration: 0.6, delay: 0.3 + item.delay, ease: [0.25, 1, 0.5, 1] }}
+                                whileHover={{ x: 10, scale: 1.02, transition: { duration: 0.3 } }}
                                 className="p-6 bg-white/70 backdrop-blur-2xl rounded-3xl border border-white shadow-premium hover:shadow-2xl hover:border-emerald-light/30 transition-all flex items-center gap-6 group relative overflow-hidden cursor-pointer"
                             >
                                 <div className="absolute inset-0 bg-gradient-to-r from-emerald-light/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>

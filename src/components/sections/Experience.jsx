@@ -16,10 +16,10 @@ const Experience = () => {
                     {experience.map((job, index) => (
                         <motion.div
                             key={index}
-                            initial={{ opacity: 0, y: 30 }}
+                            initial={{ opacity: 0, y: 40 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.8, delay: index * 0.1 }}
+                            viewport={{ once: true, margin: "-50px" }}
+                            transition={{ duration: 0.8, delay: index * 0.1, ease: [0.25, 1, 0.5, 1] }}
                             className="group relative border-b-2 border-mint-dark/50 hover:border-emerald/30 transition-colors duration-500"
                         >
                             {/* Subtle Hover Sweep Background */}

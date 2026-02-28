@@ -20,10 +20,10 @@ const Skills = () => {
                         return (
                             <motion.div
                                 key={index}
-                                initial={{ opacity: 0, y: 30 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.6, delay: index * 0.1 }}
-                                viewport={{ once: true }}
+                                initial={{ opacity: 0, y: 40, scale: 0.95 }}
+                                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                                transition={{ duration: 0.8, delay: index * 0.15, ease: [0.25, 1, 0.5, 1] }}
+                                viewport={{ once: true, margin: "-50px" }}
                                 className="h-full"
                             >
                                 <SpotlightCard spotlightColor="rgba(37, 99, 235, 0.05)" className="bg-white/60 backdrop-blur-3xl border border-white/80 rounded-[2rem] p-6 sm:p-8 hover:border-emerald/20 transition-all shadow-premium hover:shadow-2xl group h-full cursor-pointer relative overflow-hidden">

@@ -16,8 +16,8 @@ const Hero = () => {
                 {/* High-Performance Canvas Waves */}
                 <AnimatedWaves />
 
-                {/* Premium Grid Pattern */}
-                <div className="absolute inset-0 opacity-[0.02] z-10" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, #013220 1px, transparent 0)', backgroundSize: '40px 40px' }}></div>
+                {/* Premium Grid Pattern - Updated to luxury blue */}
+                <div className="absolute inset-0 opacity-[0.03] z-10" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, #0F3057 1px, transparent 0)', backgroundSize: '40px 40px' }}></div>
 
                 {/* Smooth Glowing Orbs */}
                 <motion.div
@@ -37,15 +37,15 @@ const Hero = () => {
 
                     {/* Left Content: Typography focus */}
                     <motion.div
-                        initial={{ opacity: 0, x: -100 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+                        initial={{ opacity: 0, y: 50 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 1.2, ease: [0.25, 1, 0.5, 1] }}
                         className="text-left"
                     >
                         <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ delay: 0.2, duration: 0.8 }}
+                            initial={{ opacity: 0, y: 20, scale: 0.95 }}
+                            animate={{ opacity: 1, y: 0, scale: 1 }}
+                            transition={{ delay: 0.3, duration: 0.8, ease: [0.25, 1, 0.5, 1] }}
                             className="inline-flex items-center gap-2 mb-8 px-5 py-2.5 rounded-full border border-emerald/20 bg-white/70 backdrop-blur-md shadow-sm"
                         >
                             <Sparkles className="w-4 h-4 text-emerald" />
@@ -99,9 +99,9 @@ const Hero = () => {
                     {/* Right Content: Premium Image & Animation */}
                     <div className="relative hidden lg:block h-full min-h-[500px] w-full flex items-center justify-center">
                         <motion.div
-                            initial={{ opacity: 0, x: 100, scale: 0.8, rotate: -5 }}
-                            animate={{ opacity: 1, x: 0, scale: 1, rotate: 0 }}
-                            transition={{ duration: 1.2, type: "spring", bounce: 0.4, delay: 0.2 }}
+                            initial={{ opacity: 0, scale: 0.8, y: 50 }}
+                            animate={{ opacity: 1, scale: 1, y: 0 }}
+                            transition={{ duration: 1.5, ease: [0.25, 1, 0.5, 1], delay: 0.3 }}
                             className="relative w-full max-w-[360px] mx-auto aspect-[4/5] z-10"
                         >
                             {/* Glow behind image */}
